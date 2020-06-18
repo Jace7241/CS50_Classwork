@@ -10,7 +10,7 @@ int main (void)
         n = get_int("positive number - ");                                   
 
     }
-    while(n < 0 || n > 23); 
+    while(n < 1 || n > 23); 
 //prints spaces as an upsidedown triangle
     for(int integer = n; integer > 0; integer--) //controlls rows              
     {
@@ -23,7 +23,7 @@ int main (void)
         printf("#");
         number++;
         //controlls how many hashes in a row
-        for (int a = 0; a < number; a++)
+        for (int a = 0; a < number-1; a++)
         {
             printf("#");
         }
