@@ -2,19 +2,19 @@
 #include<cs50.h>
 int main(void)
 {
-   int number = 0;
-   int n;
-   //asks for positive number less than 9
+    int number = 0;
+    int n;
+    //asks for positive number less than 9
     do 
     {
         n = get_int("positive number - ");                                   
 
     }
-    while(n < 1 || n > 8); 
+    while (n < 1 || n > 8); 
 //prints spaces as an upsidedown triangle
-    for(int integer = n; integer > 0; integer--) //controlls rows              
+    for (int integer = n; integer > 0; integer--) //controlls rows              
     {
-        for(int i = 0; i < integer - 1; i++)                  
+        for (int i = 0; i < integer - 1; i++)                  
         {
             printf(" ");
 
@@ -23,7 +23,7 @@ int main(void)
         printf("#");
         number++;
         //controlls how many hashes in a row
-        for (int a = 0; a < number-1; a++)
+        for (int a = 0; a < number - 1; a++)
         {
             printf("#");
         }
