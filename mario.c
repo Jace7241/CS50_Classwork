@@ -10,7 +10,7 @@ int main (void)
         n = get_int("positive number - ");                                   
 
     }
-    while(n < 1 || n > 23); 
+    while(n < 1 || n > 8); 
 //prints spaces as an upsidedown triangle
     for(int integer = n; integer > 0; integer--) //controlls rows              
     {
