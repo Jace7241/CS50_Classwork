@@ -1,10 +1,10 @@
 #include<stdio.h>
 #include<cs50.h>
-int main (void)
+int main(void)
 {
    int number = 0;
    int n;
-   //asks for positive number less than 23
+   //asks for positive number less than 9
     do 
     {
         n = get_int("positive number - ");                                   
