@@ -23,7 +23,7 @@ int main (void)
         printf("#");
         number++;
         controlls how many hashes in a row
-        for (int a = 0; a < number-1; a++)
+        for (int a = 0; a < number; a++)
         {
             printf("#");
         }
