@@ -22,7 +22,7 @@ int main (void)
         //prints the right angled triangle
         printf("#");
         number++;
-        controlls how many hashes in a row
+        //controlls how many hashes in a row
         for (int a = 0; a < number; a++)
         {
             printf("#");
