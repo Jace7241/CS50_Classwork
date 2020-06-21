@@ -1,36 +1,39 @@
 #include <stdio.h>
-#include <cs50.h>  
-int main(void)  
-{      
-    float change;  
-    do  
-    {  
-        change = get_float("change owed = ");  
-    } while (change < 0); 
+#include <cs50.h>
+#include <math.h>
 
-    int coins = 0;  
-    while (change >= 0.25)  
-    {  
-        coins ++;  
-        change = change - 0.25;  
-    }  
+int main(void)
+{
+    float change;
+    int  total;
+    do
+    {
+        change = get_float ("Amount owed - ");
+        total = round(change*100);
 
-    while (change >= 0.10)  
-    {  
-        coins ++;  
-        change = change - 0.10;  
-    }  
+    }while (change <= 0);
 
-    while (change >= 0.05)  
-    {  
-        coins ++;  
-        change = change - 0.05;  
-    }  
+    int amount = 0;
+    while(total >= 25) {
+        amount++;
+        total = total - 25;
+    }
 
-    while (change >= 0.01)  
-    {  
-        coins ++;  
-        change = change - 0.01;  
-    }  
-    printf ("%i\n", coins);  
-} 
+
+    while(total >= 10) {
+        amount++;
+        total = total - 10;
+    }
+
+    while(total >= 5) {
+        amount++;
+        total = total - 5;
+    }
+
+    while(total >= 1) {
+        amount++;
+        total = total - 1;
+    }
+
+    printf("%i\n", amount);
+}
