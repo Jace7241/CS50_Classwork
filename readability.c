@@ -39,7 +39,7 @@
     }
     else if(level >= 16)
     {
-     printf("Grade level 16+\n");
+     printf("Grade 16+\n");
     }
     else if(level <= 0)
     {
