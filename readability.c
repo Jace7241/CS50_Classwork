@@ -35,7 +35,7 @@
     float level = 0.0588 * (100 * (float) lettercount/(float) wordcount) - 0.296 * (100 * (float) sentancecount/(float)wordcount) - 15.8;
     if(level < 16 && level > 0)
     {
-     printf("Grade level - %i\n", (int) round(level));
+     printf("Grade %i\n", (int) round(level));
     }
     else if(level >= 16)
     {
