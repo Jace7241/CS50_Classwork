@@ -28,11 +28,11 @@ int main(int argc, string argv[])
 
         for(int i = 0, n = strlen(sentance); i<n; i++)
         {
-            if(sentance[i] >= 'a' && sentance[i] <= 'z')
+            if islower (sentance[i])
             {
                 printf("%c", (((sentance[i] + k) - 97) % 26) + 97);
             }
-            else if(sentance[i] >= 'A' && sentance[i] <='Z')
+            else if isupper(sentance[i])
             {
                 printf("cyphertext: ");
                 printf("%c", (((sentance[i] +k) - 65) %26) + 65);
