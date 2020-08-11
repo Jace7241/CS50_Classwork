@@ -22,8 +22,6 @@ int main(int argc, string argv[])
             printf("nope\n");
         }
 
-        if isdigit(k)
-        {
             
         string sentance = get_string("Plaintext: ");
         printf("ciphertext: ");
@@ -45,11 +43,6 @@ int main(int argc, string argv[])
         }
         printf("\n");
         return 0;
-        }
-        else
-        {
-            printf("no");
-            return 1;
         }
     }
 }
