@@ -11,7 +11,7 @@ int main(int argc, string argv[])
         printf("nope\n");
         return 1;
     }
-    if(argc == 2 && isdigit (*argv[1]))
+    if(argc == 2 && isdigit(*argv[1]))
     {
 
         int k = atoi(argv[1]);
@@ -22,7 +22,9 @@ int main(int argc, string argv[])
             printf("nope\n");
         }
 
-
+        if isdigit(k)
+        {
+            
         string sentance = get_string("Plaintext: ");
         printf("ciphertext: ");
 
@@ -38,11 +40,16 @@ int main(int argc, string argv[])
             }
             else
             {
-                printf("cyphertext: ");
                 printf("%c", sentance[i]);
             }
         }
         printf("\n");
         return 0;
+        }
+        else
+        {
+            printf("no");
+            return 1;
+        }
     }
 }
