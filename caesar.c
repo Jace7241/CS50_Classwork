@@ -24,7 +24,7 @@ int main(int argc, string argv[])
 
 
         string sentance = get_string("Plaintext: ");
-
+        printf("cyphertext: ");
 
         for(int i = 0, n = strlen(sentance); i<n; i++)
         {
