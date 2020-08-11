@@ -34,7 +34,6 @@ int main(int argc, string argv[])
             }
             else if isupper(sentance[i])
             {
-                printf("cyphertext: ");
                 printf("%c", (((sentance[i] +k) - 65) %26) + 65);
             }
             else
