@@ -41,7 +41,7 @@ int main(int argc, string argv[])
                 printf("%c", sentance[i]);
             }
         }
-        printf("\n");
+        printf(" ");
         return 0;
     }
 }
