@@ -34,14 +34,16 @@ int main(int argc, string argv[])
             }
             else if(sentance[i] >= 'A' && sentance[i] <='Z')
             {
+                printf("cyphertext: ");
                 printf("%c", (((sentance[i] +k) - 65) %26) + 65);
             }
             else
             {
+                printf("cyphertext: ");
                 printf("%c", sentance[i]);
             }
         }
-        printf("cyphertext: ");
+        printf("");
         return 0;
     }
 }
