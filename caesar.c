@@ -7,8 +7,9 @@ bool check_valid_key(string s);
 int main(int argc, string argv[])
 {
 
-    if (argc != 2 || !check_valid_key(argv[1]))
+    if (argc != 2 || !check_valid_key(argv[1])) //checks to see if the argument is a number
     {
+        //refuses non number arguments
         printf("Usage: ./caesar key");
         return 1;
     }
@@ -20,24 +21,36 @@ int main(int argc, string argv[])
     for (int i = 0; i < strlen(PT); i++)
     {
         char c = PT[i];
-        if(isalpha(c))
+        if (isalpha(c)) //sorts into capital and lowercase
         {
-           char m = 'A';
-           if (islower(c))
-            m = 'a';
-            printf("%c", (c - m + k) % 26 + m);
+            char m = 'A';
+            if (islower(c))
+            
+            {
+                m = 'a';
+            }
+            
+            printf("%c", (c - m + k) % 26 + m); //creates ciphertext
         }
         else
-        printf("%c", c);
+        
+        {
+            printf("%c", c);
+        }
+        
     }
 
     printf("\n");
 }
-
+//function that checks for number vs letter
 bool check_valid_key(string s)
 {
     for (int i = 0; i < strlen(s); i++)
         if (!isdigit(s[i]))
+        
+        {
             return false;
-        return true;
+        }
+        
+    return true;
 }
