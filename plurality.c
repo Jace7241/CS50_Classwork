@@ -67,19 +67,19 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
     for(int j = 0; j < candidate_count; j++)
-    
+
          if (strcmp(candidates[j].name, name) == 0)
         {
             candidates[j].votes++;
         }
-    return true;
-    
+    return false;
+
 }
 
 // Print the winner (or winners) of the election
 void print_winner(void)
 {
-    
+
     int max_vote = 0;
     //find highest vote number
     for (int j = 0; j <candidate_count; j++)
