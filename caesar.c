@@ -14,9 +14,9 @@ int main(int argc, string argv[])
     }
     int k = atoi(argv[1]);
 
-    string PT = get_string("plaintext - ");
+    string PT = get_string("plaintext: ");
 
-    printf("ciphertext - ");
+    printf("ciphertext: ");
     for (int i = 0; i < strlen(PT); i++)
     {
         char c = PT[i];
