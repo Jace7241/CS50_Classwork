@@ -131,7 +131,7 @@ int main(int argc, string argv[])
 //passed i,j and name of the candidate the user entered, look at line 77
 bool vote(int voter, int rank, string name)
 {
-    bool exist = false;
+    bool exists = false;
     for (int i = 0; i < candidate_count; i++)
     {
         //check if name is present in the candidates entered by the user by camparing two strings
@@ -141,18 +141,18 @@ bool vote(int voter, int rank, string name)
             //if you found the person is present then add that number as a rank of the candidate in the preferences array
           
             preferences[voter][rank] = i;
-            exist = true;
+            exists = true;
             break;
             //This is a bool conditions which will become true, again look at line 77
         }
     }
-    return exist;
+    return exists;
 }
 
 // Tabulate votes for non-eliminated candidates
 void tabulate(void)
 {
-    // TODO
+    
     for (int i = 0; i < voter_count; i++)
     {
         for (int j = 0; j < candidate_count; j++)
@@ -172,7 +172,7 @@ void tabulate(void)
 // Print the winner of the election, if there is one
 bool print_winner(void)
 {
-    // TODO
+    
     for (int i = 0; i < candidate_count; i++)
     {
         string most = candidates[i].name;
@@ -188,23 +188,23 @@ bool print_winner(void)
 // Return the minimum number of votes any remaining candidate has
 int find_min(void)
 {
-    int minvotes = voter_count;
+    int minimumvotes = voter_count;
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].eliminated == false && candidates[i].votes < minvotes)
+        if (candidates[i].eliminated == false && candidates[i].votes < minimumvotes)
         {
-            minvotes = candidates[i].votes;
+            minimumvotes = candidates[i].votes;
         }
     }
-    return minvotes;
+    return minimumvotes;
 }
 
 // Return true if the election is tied between all candidates, false otherwise
-bool is_tie(int minvotes)
+bool is_tie(int minimumvotes)
 {
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].eliminated == false && candidates[i].votes != minvotes)
+        if (candidates[i].eliminated == false && candidates[i].votes != minimumvotes)
         {
             return false;
         }
@@ -213,10 +213,10 @@ bool is_tie(int minvotes)
 }
 
 // Eliminate the candidate (or candidiates) in last place
-void eliminate(int minvotes)
+void eliminate(int minimumvotes)
 {
     for (int i = 0; i < candidate_count; i++)
-        if (candidates[i].votes == minvotes)
+        if (candidates[i].votes == minimumvotes)
         {
             candidates[i].eliminated = true;
         }
