@@ -32,7 +32,6 @@ int main(int argc, string argv[])
     }
 
     printf("\n");
-    return 1;
 }
 
 bool check_valid_key(string s)
