@@ -6,14 +6,14 @@
 
 int main(int argc, char *argv[])
 {
-    if(argc != 2)
+    if (argc != 2)
     {
         printf("Usage: ./recover image\n");
         return 1;
     }
 
     FILE *file = fopen(argv[1], "r");
-    if(file == NULL)
+    if (file == NULL)
     {
         printf("Error opening raw file occured");
         return 1;
@@ -29,26 +29,27 @@ int main(int argc, char *argv[])
     char current_filename[100];
     int current_filenumber = 0;
     bool found_jpeg = false;
+
     //open memory card
-    while(true)
+    while (true)
     {
 
 
         //Repeat till end of card
         //Read 512 bytes into a buffer
         bytes_read = fread(buffer, sizeof(BYTE), BLOCK_SIZE, file);
-        if(bytes_read ==0)
+        if (bytes_read == 0)
         {
             break; //end of file
         }
 
         //if start of new JPEG
-        if(buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer [3] & 0xf0) == 0xe0)
+        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer [3] & 0xf0) == 0xe0)
         {
             found_jpeg = true;
-                //If first JPEG
+            //If first JPEG
             // mark first JPEG
-            if(!is_first_jpeg)
+            if (!is_first_jpeg)
             {
                 is_first_jpeg = true;
             }
@@ -69,11 +70,11 @@ int main(int argc, char *argv[])
         }
         else
         {
-           if(found_jpeg)
-           {
-               fwrite(buffer, sizeof(BYTE), bytes_read, current_file);
+            if (found_jpeg)
+            {
+                fwrite(buffer, sizeof(BYTE), bytes_read, current_file);
 
-           }
+            }
             //if found JPEG , keep writing
             //keep writing
         }
