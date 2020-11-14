@@ -19,7 +19,7 @@ typedef struct node
 node;
 
 // Number of buckets in hash table
-const unsigned int N = LENGTH + 1* 'z';
+const unsigned int N = LENGTH + 1 * 'z';
 
 // Hash table
 int total_words = 0;
@@ -31,9 +31,9 @@ bool check(const char *word)
     int index = hash(word);
 
     node *cursor = table[index];
-    while(cursor != NULL)
+    while (cursor != NULL)
     {
-        if(strcasecmp(cursor->word, word) == 0)
+        if (strcasecmp(cursor->word, word) == 0)
         {
             return true;
         }
@@ -47,7 +47,7 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     int sum = 0;
-    for(int i = 0; i < strlen(word); i++)
+    for (int i = 0; i < strlen(word); i++)
     {
         sum += tolower(word[i]);
 
@@ -67,7 +67,7 @@ bool load(const char *dictionary)
 
     //read one word at any point in time
     char word[LENGTH + 1];
-    while(fscanf(file, "%s", word) != EOF)
+    while (fscanf(file, "%s", word) != EOF)
     {
         //while reading words
         node *new_node = malloc(sizeof(node));
@@ -81,7 +81,7 @@ bool load(const char *dictionary)
 
         //obtain hashing index
         int index = hash(word);
-        if(table[index] == NULL)
+        if (table[index] == NULL)
         {
             table[index] = new_node;
         }
@@ -108,13 +108,13 @@ unsigned int size(void)
 // Unloads dictionary from memory, returning true if successful else false
 bool unload(void)
 {
-    for(int i = 0; i < N; i++)
+    for (int i = 0; i < N; i++)
     {
         node *head = table[i];
         node *cursor = head;
         node *tmp = head;
 
-        while(cursor != NULL)
+        while (cursor != NULL)
         {
             cursor = cursor->next;
             free(tmp);
