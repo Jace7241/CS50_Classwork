@@ -9,14 +9,14 @@ def main():
 
         if total > 0:
             break
-
-    Q = total // 25
-    D = (total%25) // 10
-    N = ((total%25) % 10) // 5
-    P = ((total%25) % 10) % 5
-
+#Quarter total
+    Q = total // 25 #Quarter
+    D = (total % 25) // 10#Dime valu total
+    N = ((total % 25) % 10) // 5 #Nickel total
+    P = ((total % 25) % 10) % 5 #penny total (whats left_)
+#Total coints at all
     print(f"{Q + D + N + P}")
 
-
+#run program
 if __name__ == "__main__":
     main()
