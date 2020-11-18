@@ -26,7 +26,7 @@ for q in range(len(i)):  # eg. for the small CSV i = 3. so iterates for each nuc
     while position < len(data):
         # this gives the position at which the sequence is found
         position = data.find(i[q], position)
-        if position == -1: #  i.e not found, reset the counter, stop the loop.
+        if position == -1:  # i.e not found, reset the counter, stop the loop.
             counter = 0
             break
         # if not -1 then the sequence being searchef for has been found and if (position - the length of the sequence) is also equal to 0, it is a consequtive value
