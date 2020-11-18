@@ -1,5 +1,6 @@
 from cs50 import get_int
 
+
 def mario():
     while True:
         height = get_int("Positive height - ")
@@ -11,7 +12,7 @@ def mario():
         hash_num = i
         space_num = width - (hash_num + 1)
 
-        print(" " * space_num, end = "")
+        print(" " * space_num, end="")
         print("#" * hash_num)
 
 
