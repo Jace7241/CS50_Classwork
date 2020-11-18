@@ -4,7 +4,7 @@ def main():
     while True:
         height = get_int("Positive height - ")
         width = height + 1
-        if height >= 0 and height <= 23:
+        if height >= 0 and height <= 8:
             break
 
     for i in range(1, height + 1):
