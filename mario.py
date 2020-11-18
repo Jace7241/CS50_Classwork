@@ -1,6 +1,6 @@
 from cs50 import get_int
 
-def main():
+def mario():
     while True:
         height = get_int("Positive height - ")
         width = height + 1
@@ -16,4 +16,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    mario()
