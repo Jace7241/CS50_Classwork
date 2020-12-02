@@ -1,0 +1,18 @@
+body{
+    background-color: black;
+}
+nav{
+    border: 2px solid white;
+}
+.card-group{
+    margin-top: 10%;
+    margin-left:10%;
+    margin-right:10%;
+    margin-bottom:30%;
+}
+.card-body{
+    background-color: rgb(200,200,200);
+}
+li{
+    text-align: center;
+}
